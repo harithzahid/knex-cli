@@ -1,0 +1,31 @@
+{
+  "name": "smart-node-backend-db",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "db:recreate": "node cli/recreate.js",
+    "db:seed": "node cli/seed.js",
+    "db:dump": "node cli/dump.js",
+    "db:replicate": "node cli/replicate.js",
+    "db:migrate": "node cli/migrate.js",
+    "db:replicate:migrate": "node cli/dump.js && node cli/replicate.js && node cli/migrate.js",
+    "db:rebuild": "node cli/recreate.js && node cli/migrate.js && node cli/seed.js",
+    "mg:make": "npx knex migrate:make $fileName",
+    "db:query": "node cli/queryToFile.js"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "dayjs": "^1.11.3",
+    "dotenv": "^10.0.0",
+    "inquirer": "^9.1.0",
+    "knex": "^2.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "ssh2": "^1.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
