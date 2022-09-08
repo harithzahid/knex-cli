@@ -4,6 +4,7 @@ CLI to handle basic DBA task for Node.js developer.
 
 - Seed & migration using knex.js.
 - Multiple environment supported.
-- Config to disable action & trigger confirmation prompt for some task based on environments. 
+- Allow / disallow tasks based on environment. 
+- Enable confirmation prompt for tasks based on environment.
 
-Checkout to `seed_migration_multiple_db` branch to see configuration examples.
+Checkout to `seed_migration_multiple_db` branch to see configuration example.
